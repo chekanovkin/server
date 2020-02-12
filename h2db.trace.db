@@ -1,0 +1,145 @@
+09-01 14:11:18 database: flush
+org.h2.message.DbException: Внутренняя ошибка: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/ymnya/IdeaProjects/server/h2db.mv.db [1.4.187/7]"
+General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/ymnya/IdeaProjects/server/h2db.mv.db [1.4.187/7]" [50000-187]
+	at org.h2.message.DbException.get(DbException.java:168)
+	at org.h2.message.DbException.convert(DbException.java:295)
+	at org.h2.mvstore.db.MVTableEngine$1.uncaughtException(MVTableEngine.java:93)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:368)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:351)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2782)
+	at org.h2.mvstore.db.MVTableEngine$Store.<init>(MVTableEngine.java:162)
+	at org.h2.mvstore.db.MVTableEngine.init(MVTableEngine.java:98)
+	at org.h2.engine.Database.getPageStore(Database.java:2389)
+	at org.h2.engine.Database.open(Database.java:669)
+	at org.h2.engine.Database.openDatabase(Database.java:266)
+	at org.h2.engine.Database.<init>(Database.java:260)
+	at org.h2.engine.Engine.openSession(Engine.java:60)
+	at org.h2.engine.Engine.openSession(Engine.java:167)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:145)
+	at org.h2.engine.Engine.createSession(Engine.java:128)
+	at org.h2.engine.Engine.createSession(Engine.java:26)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:347)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:108)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:92)
+	at org.h2.Driver.connect(Driver.java:72)
+	at org.hibernate.engine.jdbc.connections.internal.DriverConnectionCreator.makeConnection(DriverConnectionCreator.java:55)
+	at org.hibernate.engine.jdbc.connections.internal.BasicConnectionCreator.createConnection(BasicConnectionCreator.java:75)
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure(DriverManagerConnectionProviderImpl.java:106)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.configureService(StandardServiceRegistryImpl.java:111)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:234)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:206)
+	at org.hibernate.engine.jdbc.internal.JdbcServicesImpl.buildJdbcConnectionAccess(JdbcServicesImpl.java:260)
+	at org.hibernate.engine.jdbc.internal.JdbcServicesImpl.configure(JdbcServicesImpl.java:94)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.configureService(StandardServiceRegistryImpl.java:111)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:234)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:206)
+	at org.hibernate.cfg.Configuration.buildTypeRegistrations(Configuration.java:1887)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1845)
+	at service.AccountService.createSessionFactory(AccountService.java:54)
+	at service.AccountService.<init>(AccountService.java:24)
+	at main.Main.main(Main.java:16)
+Caused by: org.h2.jdbc.JdbcSQLException: Внутренняя ошибка: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/ymnya/IdeaProjects/server/h2db.mv.db [1.4.187/7]"
+General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/ymnya/IdeaProjects/server/h2db.mv.db [1.4.187/7]" [50000-187]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	... 37 more
+Caused by: java.lang.IllegalStateException: The file is locked: nio:C:/Users/ymnya/IdeaProjects/server/h2db.mv.db [1.4.187/7]
+	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:773)
+	at org.h2.mvstore.FileStore.open(FileStore.java:172)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:337)
+	... 32 more
+09-01 15:13:35 database: flush
+org.h2.message.DbException: Внутренняя ошибка: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/ymnya/IdeaProjects/server/h2db.mv.db [1.4.187/7]"
+General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/ymnya/IdeaProjects/server/h2db.mv.db [1.4.187/7]" [50000-187]
+	at org.h2.message.DbException.get(DbException.java:168)
+	at org.h2.message.DbException.convert(DbException.java:295)
+	at org.h2.mvstore.db.MVTableEngine$1.uncaughtException(MVTableEngine.java:93)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:368)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:351)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2782)
+	at org.h2.mvstore.db.MVTableEngine$Store.<init>(MVTableEngine.java:162)
+	at org.h2.mvstore.db.MVTableEngine.init(MVTableEngine.java:98)
+	at org.h2.engine.Database.getPageStore(Database.java:2389)
+	at org.h2.engine.Database.open(Database.java:669)
+	at org.h2.engine.Database.openDatabase(Database.java:266)
+	at org.h2.engine.Database.<init>(Database.java:260)
+	at org.h2.engine.Engine.openSession(Engine.java:60)
+	at org.h2.engine.Engine.openSession(Engine.java:167)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:145)
+	at org.h2.engine.Engine.createSession(Engine.java:128)
+	at org.h2.engine.Engine.createSession(Engine.java:26)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:347)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:108)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:92)
+	at org.h2.Driver.connect(Driver.java:72)
+	at org.hibernate.engine.jdbc.connections.internal.DriverConnectionCreator.makeConnection(DriverConnectionCreator.java:55)
+	at org.hibernate.engine.jdbc.connections.internal.BasicConnectionCreator.createConnection(BasicConnectionCreator.java:75)
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure(DriverManagerConnectionProviderImpl.java:106)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.configureService(StandardServiceRegistryImpl.java:111)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:234)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:206)
+	at org.hibernate.engine.jdbc.internal.JdbcServicesImpl.buildJdbcConnectionAccess(JdbcServicesImpl.java:260)
+	at org.hibernate.engine.jdbc.internal.JdbcServicesImpl.configure(JdbcServicesImpl.java:94)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.configureService(StandardServiceRegistryImpl.java:111)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:234)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:206)
+	at org.hibernate.cfg.Configuration.buildTypeRegistrations(Configuration.java:1887)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1845)
+	at service.AccountService.createSessionFactory(AccountService.java:54)
+	at service.AccountService.<init>(AccountService.java:24)
+	at main.Main.main(Main.java:16)
+Caused by: org.h2.jdbc.JdbcSQLException: Внутренняя ошибка: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/ymnya/IdeaProjects/server/h2db.mv.db [1.4.187/7]"
+General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/ymnya/IdeaProjects/server/h2db.mv.db [1.4.187/7]" [50000-187]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	... 37 more
+Caused by: java.lang.IllegalStateException: The file is locked: nio:C:/Users/ymnya/IdeaProjects/server/h2db.mv.db [1.4.187/7]
+	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:773)
+	at org.h2.mvstore.FileStore.open(FileStore.java:172)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:337)
+	... 32 more
+2019-09-24 17:20:52 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "SELECT * FROM USERS INFORMATION_SCHEMA.[*]CATALOGS INFORMATION_SCHEMA.CATALOGS"
+Syntax error in SQL statement "SELECT * FROM USERS INFORMATION_SCHEMA.[*]CATALOGS INFORMATION_SCHEMA.CATALOGS"; SQL statement:
+SELECT * FROM USERS INFORMATION_SCHEMA.CATALOGS INFORMATION_SCHEMA.CATALOGS [42000-199]
+2019-10-27 18:01:28 database: flush
+org.h2.message.DbException: Внутренняя ошибка: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/ymnya/IdeaProjects/server/h2db.mv.db [1.4.199/7]"
+General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/ymnya/IdeaProjects/server/h2db.mv.db [1.4.199/7]" [50000-199]
+	at org.h2.message.DbException.get(DbException.java:194)
+	at org.h2.message.DbException.convert(DbException.java:347)
+	at org.h2.mvstore.db.MVTableEngine$1.uncaughtException(MVTableEngine.java:90)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:2787)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:441)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:404)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:3343)
+	at org.h2.mvstore.db.MVTableEngine$Store.open(MVTableEngine.java:162)
+	at org.h2.mvstore.db.MVTableEngine.init(MVTableEngine.java:95)
+	at org.h2.engine.Database.getPageStore(Database.java:2739)
+	at org.h2.engine.Database.open(Database.java:769)
+	at org.h2.engine.Database.openDatabase(Database.java:319)
+	at org.h2.engine.Database.<init>(Database.java:313)
+	at org.h2.engine.Engine.openSession(Engine.java:69)
+	at org.h2.engine.Engine.openSession(Engine.java:201)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:178)
+	at org.h2.engine.Engine.createSession(Engine.java:161)
+	at org.h2.engine.Engine.createSession(Engine.java:31)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:336)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:169)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:148)
+	at org.h2.Driver.connect(Driver.java:69)
+	at org.h2.util.JdbcUtils.getConnection(JdbcUtils.java:299)
+	at org.h2.server.web.WebServer.getConnection(WebServer.java:782)
+	at org.h2.server.web.WebApp.login(WebApp.java:1004)
+	at org.h2.server.web.WebApp.process(WebApp.java:219)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:169)
+	at org.h2.server.web.WebThread.process(WebThread.java:139)
+	at org.h2.server.web.WebThread.run(WebThread.java:93)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: Внутренняя ошибка: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/ymnya/IdeaProjects/server/h2db.mv.db [1.4.199/7]"
+General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/ymnya/IdeaProjects/server/h2db.mv.db [1.4.199/7]" [50000-199]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:502)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:427)
+	... 30 more
+Caused by: java.lang.IllegalStateException: The file is locked: nio:C:/Users/ymnya/IdeaProjects/server/h2db.mv.db [1.4.199/7]
+	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:883)
+	at org.h2.mvstore.FileStore.open(FileStore.java:172)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:390)
+	... 24 more
